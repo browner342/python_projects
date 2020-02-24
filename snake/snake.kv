@@ -1,0 +1,34 @@
+#:kivy 1.0.9
+<Snake>:
+    size: 50, 50
+    canvas:
+        Color:
+            rgb: (0, 249 , 0)
+        Rectangle:
+            pos:self.pos
+            size:self.size
+        
+<Fruit>:
+    size: 50, 50
+    canvas:
+        Color:
+            rgb: (10, 0, 0)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<Game>:
+    snake: snake
+    fruit: fruit
+
+    Snake:
+        id: snake
+        center: self.width / 2, self.height / 2
+        size: root.width * 1/20, root.height * 1/20
+
+    Fruit:
+        id: fruit
+        pos: self.pos
+        size: root.width * 1/20, root.height * 1/20
+
+    
